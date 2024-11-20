@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:radius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_image_background"
+            android:contentDescription="Product Image" />
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/primaryTextColor"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Product Price -->
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="₹1000"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/secondaryTextColor"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Add to Cart Button -->
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"
+            android:backgroundTint="#0000FF"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

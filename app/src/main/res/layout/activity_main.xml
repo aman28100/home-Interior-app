@@ -1,0 +1,91 @@
+<!-- res/layout/activity_main.xml -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/background_light"
+    android:padding="16dp">
+
+    <!-- Header Section -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Aman Interior"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="24dp"
+        android:letterSpacing="0.1"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="2" />
+
+    <!-- Login Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:textColorHint="#6200EE"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:drawablePadding="8dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:textColorHint="#6200EE"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:drawablePadding="8dp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="#FFF"
+                android:layout_marginTop="24dp"
+                android:padding="12dp"
+                android:backgroundTint="#6200EE"
+                android:textAllCaps="false"
+                android:elevation="4dp"
+                android:letterSpacing="0.05"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

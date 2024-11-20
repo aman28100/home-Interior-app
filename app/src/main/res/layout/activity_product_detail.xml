@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddToCart">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Product Title -->
+            <TextView
+                android:id="@+id/tvProductTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Title"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Product Image -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivProductImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Product Image" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product Description -->
+            <TextView
+                android:id="@+id/tvProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Description"
+                android:textColor="#555555"
+                android:paddingBottom="16dp"
+                android:textSize="16sp" />
+
+            <!-- Product Cost -->
+            <TextView
+                android:id="@+id/tvProductCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cost: ₹1000"
+                android:textSize="18sp"
+                android:textColor="#FF5722"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Related Products Section Title -->
+            <TextView
+                android:id="@+id/tvRelatedProductsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shop Products"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textColor="#333333"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+            <!-- RecyclerView for Related Products -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewRelatedProducts"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:clipToPadding="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:scrollbars="horizontal"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed "Add to Cart" Button at the Bottom -->
+    <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Cart Page"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF5722"
+        android:textSize="16sp"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

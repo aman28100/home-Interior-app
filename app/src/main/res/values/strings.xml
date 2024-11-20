@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Intrior_app</string>
+    <string name="product_image">Image of the product</string>
+    <string name="related_product_image">Related product image</string>
+
+</resources>

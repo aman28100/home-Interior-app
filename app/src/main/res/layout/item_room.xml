@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/card_background"
+    android:elevation="4dp"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp">
+
+    <ImageView
+        android:id="@+id/ivRoomImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Room Image"
+        android:background="@drawable/rounded_image_background" />
+
+    <!-- Room Details -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:paddingEnd="16dp">
+
+        <!-- Room Title -->
+        <TextView
+            android:id="@+id/tvRoomTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryTextColor"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <!-- Room Description -->
+        <TextView
+            android:id="@+id/tvRoomDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Description"
+            android:textColor="@color/secondaryTextColor"
+            android:paddingTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <!-- Room Cost -->
+        <TextView
+            android:id="@+id/tvRoomCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cost: $100"
+            android:textColor="@color/tertiaryTextColor"
+            android:paddingTop="8dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>
